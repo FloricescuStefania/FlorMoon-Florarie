@@ -1,0 +1,825 @@
+/* ── Variabile ── */
+:root {
+    --rose:       #b5606a;
+    --deep-rose:  #8c3d47;
+    --mauve:      #6b2d37;
+    --blush:      #f2d0cc;
+    --soft-pink:  #f9eeeb;
+    --cream:      #fdf6f0;
+    --border:     #e8cac6;
+    --dark:       #2c1a1d;
+    --mid:        #5c3a3e;
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans:  'Jost', sans-serif;
+}
+
+/* ── Base ── */
+body {
+    font-family: var(--font-sans);
+    background-color: var(--cream);
+    color: var(--dark);
+    font-weight: 300;
+}
+
+/* ── Home button ── */
+.btn-primary {
+    background-color: var(--deep-rose);
+    border-color: var(--deep-rose);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0.6rem 1.8rem;
+}
+.btn-primary:hover {
+    background-color: var(--mauve);
+    border-color: var(--mauve);
+}
+
+/* ── Hero home ── */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+    background: var(--soft-pink);
+}
+.hero-photo {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3.5rem 3.5rem 3.5rem 3rem;
+    gap: 1.4rem;
+}
+.hero-title {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--mauve);
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+/* ── About Shop ── */
+.about-shop {
+    max-width: 820px;
+    margin: 2.5rem auto;
+    font-size: 1.5 rem;
+    color: var(--mid);
+    line-height: 1.8;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+/* ── Best Sellers  ── */
+/* ── Arranjaments Card  ── */
+.section-title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    color: var(--mauve);
+}
+.arr-card {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.arr-card:hover { 
+    transform: translateY(-4px); 
+    box-shadow: 0 10px 28px rgba(140,61,71,0.14); 
+}
+.arr-card img { 
+    width: 100%; 
+    aspect-ratio: 3/4; 
+    object-fit: cover; 
+    display: block; 
+}
+.arr-card-label {
+    position: absolute; top: 1rem; left: 1rem;
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    color: #fff; font-weight: 500;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.45);
+}
+.arr-card-btn { 
+    position: absolute; 
+    bottom: 1rem; 
+    left: 1rem; 
+}
+
+/* ── Abous us  ── */
+/* ── Promo Banner Section  ── */
+.promo-banner {
+    min-height: 450px;
+    width: 100%;
+}
+.promo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.promo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 2; /* Peste imagine */
+}
+.promo-title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.promo-text {
+    max-width: 650px;
+    margin: 0 auto 2rem;
+    font-weight: 300;
+}
+.btn-promo {
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+.btn-promo:hover {
+    background: white;
+    color: black;
+}
+
+/* ── Features Section ── */
+.features {
+    background-color: var(--white); 
+}
+.feature-card {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--soft-pink);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    transition: transform 0.3s;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--rose);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+}
+
+/* ── Custom Section ── */
+.homepage-details {
+    background-color:  #f2d0cc;
+}
+.homepage-details img {
+    border-radius: 8px;
+}
+
+/* ── Navbar ── */
+.navbar {
+    background-color: var(--light-color);
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;/* ramane deasupra elementelor */
+}
+
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #b5606a  !important; 
+    transition: background-color 0.3s ease;
+}
+.nav-link {
+    color: var(--dark-color);
+    font-weight: 500;
+    margin: 0 5px;
+    position: relative;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: var(--primary-color);
+}
+
+.nav-link:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.cart-badge {
+    top: -5px;
+    right: -5px;
+    font-size: 0.6rem;
+}
+
+.nav-icons a {
+    font-size: 1.2rem;
+}
+
+/* ── Footer ── */
+footer {
+    background-color: var(--soft-pink);
+    color: var(--light-text);
+}
+footer p {
+    color: var(--light-text);
+}
+.footer-title {
+    color: #8c3d47;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+}
+.footer-links a {
+    color: var(--light-text);
+    display: block;
+    margin-bottom: 5px;
+}
+.footer-links a:hover {
+    color: white;
+    text-decoration: none;
+}
+.footer-contact li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* --- Catalog Styling --- */
+.catalog-section {
+     background-color: var(--cream);
+    padding-top: 80px;
+}
+.catalog-title {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: black;
+    font-weight: 400;
+}
+.product-item {
+    margin-bottom: 2rem;
+}
+.product-img-wrapper {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.product-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.product-item:hover img {
+    transform: scale(1.05);
+}
+.product-name {
+    font-family: var(--font-sans);
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #000;
+}
+.product-price {
+    font-size: 0.9rem;
+    color: black;
+    margin-bottom: 30px;
+}
+.btn-order-outline {
+    display: inline-block;
+    padding: 8px 25px;
+    border: 1px solid #8c3d47;
+    background-color: #8c3d47;
+    color:white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-radius: 50px;        
+}
+.btn-order-outline:hover {
+    background-color:  #6b2d37;
+    color: #fff;
+}
+
+/* --- Buton produs add to cart --- */
+.product-action {
+    display: flex;
+    flex-direction: column; 
+    gap: 1rem;              
+}
+.btn-add-to-cart {
+    display: inline-block;      
+    background-color: var(--deep-rose);
+    color: #fff;
+    font-size: 0.95rem;         
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;     
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;           
+    margin-bottom: 1rem;
+}
+
+.btn-add-to-cart:hover {
+    background-color: var(--mauve);
+    color: #fff;
+}
+
+/* ---------------- Contact & About Us ---------------- */
+/* Contact Hero */
+.contact-hero-solid {
+    background-color: #f2d0cc;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-main-title {
+    color: #8c3d47;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.contact-hero-text {
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Services Section */
+.services-section {
+    background-color: #f2d0cc;
+    padding: 80px 0;
+}
+
+.services-main-title {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: 2.5rem;
+    text-transform: none;
+    margin-bottom: 3rem;
+}
+
+.service-icon-container {
+    width: 40px;
+    min-width: 40px;
+    height: auto;
+}
+
+.service-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: #111;
+}
+
+.service-desc {
+    font-size: 0.8rem;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* Spacing între rândurile din services */
+.services-section .row {
+    row-gap: 50px;
+}
+/* Contact Cards */
+.contact-info-card,
+.contact-card {
+    background-color: #f2d0cc;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    height: 100%;
+}
+
+.contact-card {
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon-fa {
+    font-size: 2.5rem;
+    color: #8c3d47;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    color: black;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.card-detail {
+    font-weight: 700;
+    color: #8c3d47;
+    font-size: 0.95rem;
+}
+
+/*-------- Custom bouquets --------*/
+.custom-form-section {
+    background-color: var(--cream);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.arrangement-card {
+    background-color: #8b3d44; 
+    width: 100%;
+    max-width: 800px; 
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.form-main-title {
+    font-family: 'serif'; 
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.form-input-field {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.15); 
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    padding: 12px 15px;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-input-field:focus {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: white;
+}
+
+.form-input-field::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.btn-submit-white {
+    background-color: white;
+    color: #8b3d44;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 50px; 
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.8s;
+}
+
+.btn-submit-white:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+
+/*---------- Accordion FAQ ---------*/
+.accordion-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+    display: block; 
+}
+
+.cursor-pointer { cursor: pointer; }
+
+.accordion-item-custom span {
+    letter-spacing: 0.5px;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/*culoare la butoanele de faq*/
+.accordion-button {
+    background-color:var(--blush) !important; 
+    color: #8c3d47 !important; 
+    box-shadow: none !important;
+    background-image: none !important;
+}
+
+/*------- Login Section Design ------*/
+.login-section {
+    min-height: 100vh; /* Ocupă toată înălțimea ecranului */
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+.login-card {
+    max-width: 380px;
+    width: 100%;
+    padding: 2rem;
+}
+.login-title {
+    font-family: 'Poppins', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1.5rem;
+}
+.login-input {
+    background-color: #f4f4f4; 
+    border: none;
+    border-radius: 50px; 
+    padding: 15px 25px;
+    font-size: 0.95rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+.login-input:focus {
+    background-color: var(--blush);
+    box-shadow: none;
+    outline: none;
+}
+.login-input::placeholder {
+    color: #aaa;
+}
+.btn-login {
+    background-color: var(--mauve);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.btn-login:hover {
+    background-color: var(--mauve);
+    color: #fff;
+}
+.signup-text {
+    font-size: 0.85rem;
+    color: #888;
+}
+.signup-link {
+    color: var(--mauve);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid #2d7a5e;
+}
+
+
+/* ---------------- Register Section ---------------- */
+.register-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.register-card {
+    background-color: #fff;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 40px;
+}
+.register-card h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--mauve);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/*--------- Account Information ------ */
+.profile-page {
+    background: #f5f2eb;
+    min-height: 100vh;
+    padding: 3rem 1rem;
+}
+.profile-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* ----- SIDE BAR -----*/
+.profile-sidebar {
+    text-align: center;
+}
+.profile-logo {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+    line-height: 1;
+}
+.profile-name {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 0.15rem;
+}
+.profile-email {
+    font-size: 0.78rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+.profile-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+.profile-nav-item a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0.6rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: #333;
+}
+.profile-nav-item a:hover {
+    background: rgba(0,0,0,0.05);
+}
+.profile-nav-item.active a {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+.profile-nav-item a i {
+    font-size: 0.8rem;
+    width: 14px;
+    color: #555;
+}
+.profile-nav-item.logout a {
+    color: var(--rose);
+}
+.profile-nav-item.logout a i {
+    color: var(--rose);
+}
+
+/* Main card*/
+.account-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem 2rem 1.75rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+.account-card-title {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+}
+
+/* ── Fields ── */
+.field-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.25rem;
+    margin-bottom: 1rem;
+}
+.field-full {
+    grid-column: 1 / -1;
+}
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+.field-label {
+    font-size: 0.78rem;
+    color: #555;
+    font-weight: 400;
+}
+.field-input {
+    padding: 0.6rem 0.8rem;
+    border: 1.5px solid #d8d3cc;
+    border-radius: 8px;
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    color: #1a1a1a;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.18s, box-shadow 0.18s;
+    width: 100%;
+}
+.field-input:focus {
+    border-color: #4a5e3a;
+    box-shadow: 0 0 0 3px rgba(74, 94, 58, 0.1);
+}
+.field-textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* ── Save button ── */
+.btn-save {
+    background-color: var(--deep-rose);
+    color: #fff;
+    border-radius: 50px;                
+    padding: 0.6rem 1.5rem;             
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-save:hover {
+    background-color: var(--mauve);      
+    color: #fff;
+}
